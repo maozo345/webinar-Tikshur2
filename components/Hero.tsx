@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
         >
           מרחבי התקשור
           <br />
-          <span className="text-3xl md:text-5xl font-bold text-gold-400/90 block mt-2">הדיגיטליים</span>
+          <span className="text-3xl md:text-5xl font-bold text-gold-400/90 block mt-2">הדיגיטליים (ZOOM)</span>
         </motion.h1>
 
         <motion.p 
@@ -57,7 +57,7 @@ export const Hero: React.FC = () => {
           </Button>
           <div className="mt-6 flex items-center justify-center gap-2 text-sm text-spiritual-100/60">
             <Star className="w-4 h-4 text-gold-500" />
-            <span>בונוסים מיוחדים לנרשמות למסלול המלא</span>
+            <span>עיקר ההכשרה היא פרקטיקה ותרגול</span>
             <Star className="w-4 h-4 text-gold-500" />
           </div>
         </motion.div>

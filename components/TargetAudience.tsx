@@ -36,12 +36,12 @@ export const TargetAudience: React.FC = () => {
             {audienceList.map((item, index) => (
               <div 
                 key={index} 
-                className="flex items-start gap-4 p-4 rounded-xl hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10 group"
+                className="flex items-start gap-4 p-5 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300 border border-white/5 hover:border-gold-500/30 group"
               >
-                <div className="bg-gold-500/20 p-1 rounded-full mt-1 group-hover:bg-gold-500 group-hover:text-black transition-colors duration-300 text-gold-500">
+                <div className="bg-gold-500/20 p-1.5 rounded-full mt-0.5 group-hover:bg-gold-500 group-hover:text-black transition-colors duration-300 text-gold-500 shrink-0">
                   <Check className="w-4 h-4" />
                 </div>
-                <span className="text-lg text-spiritual-50 font-light">{item}</span>
+                <span className="text-lg text-spiritual-50 font-light leading-relaxed">{item}</span>
               </div>
             ))}
           </div>

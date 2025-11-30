@@ -1,43 +1,43 @@
 import React from 'react';
 import { Section } from './Section';
-import { Gift, Play, MessageCircle, Star, Video, Layers } from 'lucide-react';
+import { Gift, Video, MessageCircle, Star, Layers, Mic } from 'lucide-react';
 
 const bonuses = [
   { 
     id: '1', 
-    title: 'קורס דיגיטלי מוקלט: 12 הדרכים', 
-    desc: 'קורס תקשור מקיף המהווה בסיס לידע',
+    title: 'קורס דיגיטלי מוקלט 12 הדרכים', 
+    desc: 'קורס תקשור',
     icon: Video
   },
   { 
     id: '2', 
-    title: 'קורס דיגיטלי: קריאה בקלפים', 
-    desc: 'כולל הקלטות של מאחורי הקלעים של קריאה בקלפים',
+    title: 'קורס דיגיטלי קריאה בקלפים', 
+    desc: 'הקלטות של מאחורי הקלעים של קריאה בקלפים',
     icon: Layers
   },
   { 
     id: '3', 
     title: 'הקלטות של כל שיעור', 
-    desc: 'החומר נשאר איתך לתרגול חוזר והעמקה',
-    icon: Play
+    desc: 'זמין לצפייה חוזרת',
+    icon: Mic
   },
   { 
     id: '4', 
-    title: 'תוכן שמתעדכן', 
-    desc: 'קורס של הכשרת התקשור עם תכנים חדשים שנוספים',
+    title: 'קורס של הכשרת התקשור', 
+    desc: 'תוכן שמתעדכן',
     icon: Gift
   },
   { 
     id: '5', 
-    title: 'פידבאק ומשוב אישי בלייב', 
-    desc: 'כלים אישיים לשיפור יכולת התקשור שלך',
+    title: 'פידבאק ומשוב עם כלים אישי בלייב', 
+    desc: 'לגבי היכולת תקשור שלך',
     icon: Star,
     highlight: true
   },
   { 
     id: '6', 
-    title: 'ליווי בוואצפ קבוצתי', 
-    desc: 'מענה ותמיכה לאורך כל המסע',
+    title: 'ליווי בקבוצת וואצפ קבוצתית', 
+    desc: 'לאורך כל המסע',
     icon: MessageCircle
   },
 ];
@@ -46,12 +46,10 @@ export const Bonuses: React.FC = () => {
   return (
     <Section className="bg-spiritual-900/30" light>
       <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-          בונוסים למסלול המלא
+        <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+          בונוסים למסלול המלא של הכשרת תקשור
         </h2>
-        <p className="text-xl text-gold-400 font-medium">
-          מעטפת של ידע ותמיכה להצלחה שלך
-        </p>
+        <div className="w-24 h-1 bg-gold-500 mx-auto rounded-full"></div>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -78,11 +76,9 @@ export const Bonuses: React.FC = () => {
         ))}
       </div>
       
-      <div className="mt-12 text-center p-6 bg-gold-500/10 rounded-2xl border border-gold-500/20 max-w-3xl mx-auto">
-        <p className="text-lg text-white">
+      <div className="mt-12 text-center p-8 bg-gold-500/10 rounded-2xl border border-gold-500/20 max-w-3xl mx-auto backdrop-blur-sm">
+        <p className="text-xl text-white font-medium">
           בכל מפגש את מקבלת תקשור ונותנת תקשור
-          <br />
-          <span className="text-gold-400 font-bold mt-2 block">זהו המפתח לפיתוח הביטחון והיכולת שלך</span>
         </p>
       </div>
     </Section>
