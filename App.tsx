@@ -26,9 +26,9 @@ const StickyCTA = () => {
       <Button 
         href="https://chat.whatsapp.com/HqjcH2GgzL9Hqy666R0HDc" 
         fullWidth
-        className="text-sm py-3"
+        className="text-sm py-3 font-bold"
       >
-        להצטרפות למפגש הראשון במתנה
+        אני רוצה להצטרף למפגש הראשון במתנה
       </Button>
     </div>
   );
