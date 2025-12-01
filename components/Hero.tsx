@@ -32,11 +32,11 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-spiritual-100 to-purple-200 leading-[1.1] tracking-tight drop-shadow-lg"
+          className="text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-spiritual-100 to-purple-200 leading-[1.1] tracking-tight drop-shadow-2xl"
         >
           מרחבי התקשור
           <br />
-          <span className="text-4xl md:text-6xl lg:text-7xl font-bold text-gold-400 block mt-4 drop-shadow-xl">הדיגיטליים (ZOOM)</span>
+          <span className="text-4xl md:text-6xl lg:text-7xl font-bold text-gold-400 block mt-4 drop-shadow-lg">הדיגיטליים (ZOOM)</span>
         </motion.h1>
 
         <motion.div 
@@ -58,7 +58,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="pt-8 flex flex-col items-center gap-6"
         >
-          <Button href="https://chat.whatsapp.com/HqjcH2GgzL9Hqy666R0HDc" className="shadow-gold-500/25 shadow-2xl">
+          <Button href="https://chat.whatsapp.com/HqjcH2GgzL9Hqy666R0HDc" className="shadow-gold-500/25 shadow-2xl hover:shadow-gold-500/40">
             אני רוצה להצטרף למפגש הראשון במתנה
           </Button>
           
