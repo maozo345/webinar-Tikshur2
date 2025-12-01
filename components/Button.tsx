@@ -17,11 +17,11 @@ export const Button: React.FC<ButtonProps> = ({
   className = '', 
   fullWidth = false 
 }) => {
-  const baseStyle = "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 active:scale-95";
+  const baseStyle = "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 active:scale-95";
   
   const variants = {
-    primary: "bg-gradient-to-r from-gold-400 to-gold-600 text-black hover:from-gold-300 hover:to-gold-500 shadow-lg hover:shadow-gold-500/30",
-    secondary: "bg-transparent border-2 border-gold-500 text-gold-400 hover:bg-gold-500/10"
+    primary: "bg-gold-shimmer bg-[length:200%_100%] hover:bg-[100%_0] text-black hover:text-spiritual-950 shadow-lg shadow-gold-500/20",
+    secondary: "bg-transparent border-2 border-gold-500 text-gold-400 hover:bg-gold-500/10 hover:text-gold-300"
   };
 
   const widthClass = fullWidth ? "w-full" : "";
