@@ -3,52 +3,28 @@ import { ArrowLeft } from 'lucide-react';
 
 interface ButtonProps {
   children: React.ReactNode;
-  onClick?: () => void;
-  href?: string;
-  variant?: 'primary' | 'secondary';
+  href: string;
   className?: string;
   fullWidth?: boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({ 
-  children, 
-  href, 
-  variant = 'primary', 
-  className = '', 
-  fullWidth = false 
-}) => {
-  const baseStyle = "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 active:scale-95";
-  
-  const variants = {
-    primary: "bg-gold-shimmer bg-[length:200%_100%] hover:bg-[100%_0] text-black hover:text-spiritual-950 shadow-lg shadow-gold-500/20",
-    secondary: "bg-transparent border-2 border-gold-500 text-gold-400 hover:bg-gold-500/10 hover:text-gold-300"
-  };
-
-  const widthClass = fullWidth ? "w-full" : "";
-
-  const content = (
-    <>
-      <span className="relative z-10">{children}</span>
-      <ArrowLeft className="w-5 h-5 animate-pulse relative z-10" />
-    </>
-  );
-
-  if (href) {
-    return (
-      <a 
-        href={href} 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        className={`${baseStyle} ${variants[variant]} ${widthClass} ${className}`}
-      >
-        {content}
-      </a>
-    );
-  }
-
+export const Button: React.FC<ButtonProps> = ({ children, href, className = '', fullWidth = false }) => {
   return (
-    <button className={`${baseStyle} ${variants[variant]} ${widthClass} ${className}`}>
-      {content}
-    </button>
+    <a 
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`
+        relative inline-flex items-center justify-center gap-3
+        bg-gradient-to-r from-gold to-gold-dark
+        text-black font-bold rounded-full
+        transition-all duration-300 hover:scale-105 shadow-[0_0_20px_rgba(251,191,36,0.3)]
+        ${fullWidth ? 'w-full' : ''}
+        ${className}
+      `}
+    >
+      <span>{children}</span>
+      <ArrowLeft className="w-5 h-5 animate-pulse" />
+    </a>
   );
 };
