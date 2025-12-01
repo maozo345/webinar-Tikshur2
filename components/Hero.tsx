@@ -8,17 +8,21 @@ export const Hero: React.FC = () => {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 pt-20 pb-12">
       {/* Background Ambience */}
       <div className="absolute inset-0 bg-cosmic-gradient z-0"></div>
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-600/30 rounded-full blur-[100px] animate-pulse"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-600/20 rounded-full blur-[100px]"></div>
+      
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[100px] animate-pulse"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-600/10 rounded-full blur-[100px]"></div>
+        <div className="absolute top-[20%] left-[20%] w-[2px] h-[2px] bg-white animate-twinkle"></div>
+        <div className="absolute top-[40%] right-[30%] w-[3px] h-[3px] bg-gold-400 animate-twinkle delay-75"></div>
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
+      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-gold-400 text-sm font-medium tracking-wide mx-auto"
+          className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass-panel text-gold-400 text-sm md:text-base font-medium tracking-wide mx-auto border-gold-500/20"
         >
           <Sparkles className="w-4 h-4" />
           <span>מסע של 9 מפגשים מעשיים</span>
@@ -28,37 +32,40 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-spiritual-100 to-purple-300 leading-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-br from-white via-spiritual-100 to-purple-200 leading-[1.1] tracking-tight drop-shadow-lg"
         >
           מרחבי התקשור
           <br />
-          <span className="text-3xl md:text-5xl font-bold text-gold-400/90 block mt-2">הדיגיטליים (ZOOM)</span>
+          <span className="text-4xl md:text-6xl lg:text-7xl font-bold text-gold-400 block mt-4 drop-shadow-xl">הדיגיטליים (ZOOM)</span>
         </motion.h1>
 
-        <motion.p 
+        <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-2xl text-spiritual-100/90 max-w-3xl mx-auto leading-relaxed font-light"
+          className="relative"
         >
-          הקשבה אמיתית היא מיומנות. שפה של הנשמה.
-          <br className="hidden md:block" />
-          וכשמתחילים לדבר אותה החיים מקבלים בהירות, משמעות, וקסם יומיומי.
-        </motion.p>
+          <p className="text-lg md:text-2xl text-spiritual-100/90 max-w-3xl mx-auto leading-relaxed font-light">
+            הקשבה אמיתית היא מיומנות. שפה של הנשמה.
+            <br className="hidden md:block" />
+            וכשמתחילים לדבר אותה החיים מקבלים בהירות, משמעות, וקסם יומיומי.
+          </p>
+        </motion.div>
 
         <motion.div 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.6 }}
-          className="pt-8"
+          className="pt-8 flex flex-col items-center gap-6"
         >
-          <Button href="https://chat.whatsapp.com/HqjcH2GgzL9Hqy666R0HDc">
+          <Button href="https://chat.whatsapp.com/HqjcH2GgzL9Hqy666R0HDc" className="shadow-gold-500/25 shadow-2xl">
             אני רוצה להצטרף למפגש הראשון במתנה
           </Button>
-          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-spiritual-100/60">
-            <Star className="w-4 h-4 text-gold-500" />
+          
+          <div className="flex items-center justify-center gap-2 text-sm md:text-base text-spiritual-100/60 font-light">
+            <Star className="w-4 h-4 text-gold-500 fill-gold-500" />
             <span>עיקר ההכשרה היא פרקטיקה ותרגול</span>
-            <Star className="w-4 h-4 text-gold-500" />
+            <Star className="w-4 h-4 text-gold-500 fill-gold-500" />
           </div>
         </motion.div>
       </div>
